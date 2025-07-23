@@ -456,11 +456,29 @@ main {
   padding-right: 10px;
   padding-top: 10px;
 }
-/* .code-link{
-  height: 10px;
-  width: 100%;
-  background-color: red;
-} */
+.code-link{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding-top: 25px;
+ padding-bottom: 10px;
+}
+.link-btn{
+  padding: 5px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background-color:orange;
+  color: white;
+  cursor: pointer;
+  &:hover{
+    background-color: orangered;
+  }
+}
+.link-anger{
+  text-decoration: none;
+}
 .project-card:hover {
   transform: translateY(-5px);
 }
@@ -880,7 +898,7 @@ label{
 @media (max-width: 768px) {
   .project {
     height: auto;
-    padding-bottom:370px;
+    padding-bottom:450px;
   }
   .project-section {
     flex-direction: column;
