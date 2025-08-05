@@ -9,12 +9,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
-    <header class="head">
-      <!-- <div class="head"> -->
+      <input type="checkbox" id="sidebar-toggle" class="sidebar" hidden >
+
+      <div class="overlay"></div>
+
+    <header class="head" id="sidebar">
+
       <div class="img">
         <img
           id="image"
@@ -25,6 +30,11 @@
         />
       </div>
       <h1 class="head-name">Mathavan</h1>
+
+     
+      <label for="sidebar-toggle" class="close-btn"><i class="fa-solid fa-xmark fa-2xl" style="color: white;"></i></label>
+       <!-- <button onclick="closeSidebar()" class="close-btn"><i class="fa-solid fa-bars fa-2xl" style="color: white;"></i></button>
+   -->
       <div class="box-model">
         <!-- <div class="box">
           <a
@@ -66,9 +76,9 @@
       </div>
       <nav>
         <ul type="none" class="nav-list">
-          <li>
-            <a href="#Home" class="anchor">
-              <i id="color" class="fa-solid fa-house-chimney"></i> Home</a
+          <li >
+            <a href="#Home" class="anchor" >
+              <i id="color" class="fa-solid fa-house-chimney" ></i> Home</a
             >
           </li>
           <li>
@@ -101,10 +111,12 @@
           </li>
         </ul>
       </nav>
-      <!-- </div> -->
     </header>
     <main>
       <section id="Home" class="home">
+          
+           <!-- <button onclick="openSidebar()" class="menu-btn"><i class="fa-solid fa-bars fa-2xl" style="color: white;"></i></button> -->
+         <label for="sidebar-toggle" class="menu-btn"><i class="fa-solid fa-bars fa-2xl" style="color: white;"></i></label>
         <div class="side-right">
           <h1 class="home-name">Mathavan</h1>
           <p class="lead">
@@ -134,7 +146,7 @@
               alt="Mathavan Profile Picture"
               height="400px"
               width="400px"
-              style="border-radius: 2px; margin-bottom: 20px"
+              style="border-radius: 2px; margin-bottom: 20px; "
             />
           </div>
           <div class="front">
@@ -156,7 +168,7 @@
                       class="fa-solid fa-chevron-right"
                     ></i>
                     <strong>Email:</strong>
-                    <span> mathavan3221@gmail.com</span>
+                    <span class="align-style"> mathavan3221@gmail.com</span>
                   </li>
                   <li>
                     <i
@@ -222,12 +234,6 @@
           HTML, CSS, JavaScript, and React.js expertise for building responsive
           web applications.
         </p>
-        <!-- <ul class="order">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JAVASCRIPT</li>
-          <li>REACT.JS</li>
-        </ul> -->
         <div class="skill-list">
           <div class="skill-body">
             <span class="skill-bar">
@@ -235,14 +241,7 @@
               <i class="val">90%</i>
             </span>
             <div class="skill-border">
-              <div
-                class="skill-color"
-                role="progressbar"
-                aria-valuenow="90%"
-                aria-valuemax="100"
-                aria-valuemin="0"
-                style="width: 90%"
-              ></div>
+              <div class="skill-color" role="progressbar" aria-valuenow="90%" aria-valuemax="100" aria-valuemin="0" style="width: 90%;"></div>
             </div>
           </div>
           <div class="skill-body">
@@ -251,14 +250,7 @@
               <i class="val">75%</i>
             </span>
             <div class="skill-border">
-              <div
-                class="skill-color"
-                role="progressbar"
-                aria-valuenow="90%"
-                aria-valuemax="100"
-                aria-valuemin="0"
-                style="width: 75%"
-              ></div>
+              <div class="skill-color" role="progressbar" aria-valuenow="90%" aria-valuemax="100" aria-valuemin="0" style="width: 75%;"></div>
             </div>
           </div>
           <div class="skill-body">
@@ -267,14 +259,7 @@
               <i class="val">70%</i>
             </span>
             <div class="skill-border">
-              <div
-                class="skill-color"
-                role="progressbar"
-                aria-valuenow="90%"
-                aria-valuemax="100"
-                aria-valuemin="0"
-                style="width: 70%"
-              ></div>
+              <div class="skill-color" role="progressbar" aria-valuenow="90%" aria-valuemax="100" aria-valuemin="0" style="width: 70%;"></div>
             </div>
           </div>
           <div class="skill-body">
@@ -283,17 +268,20 @@
               <i class="val">60%</i>
             </span>
             <div class="skill-border">
-              <div
-                class="skill-color"
-                role="progressbar"
-                aria-valuenow="90%"
-                aria-valuemax="100"
-                aria-valuemin="0"
-                style="width: 60%"
-              ></div>
+              <div class="skill-color" role="progressbar" aria-valuenow="90%" aria-valuemax="100" aria-valuemin="0" style="width: 60%;"></div>
+            </div>
+          </div>
+          <div class="skill-body">
+            <span class="skill-bar">
+              <span>BOOTSTRAP</span>
+              <i class="val">60%</i>
+            </span>
+            <div class="skill-border">
+              <div class="skill-color" role="progressbar" aria-valuenow="90%" aria-valuemax="100" aria-valuemin="0" style="width: 60%;"></div>
             </div>
           </div>
         </div>
+        
       </section>
       <section id="Resume" class="resume">
         <h1 class="resume-name">Resume</h1>
@@ -420,13 +408,15 @@
         <div class="project-section">
           <div class="project-card">
             <h1 class="pro-heading">Weather App</h1>
-            <img
+            <center>
+              <img
               src="./img/Weather.png"
               alt="Project Screenshot"
               class="pro-img"
               height="350px"
               width="550px"
             />
+            </center>
             <p class="para-caption">
               Created a responsive weather application using React.js and CSS
               modules for cross-device usability. Fetched real-time weather data
@@ -440,13 +430,15 @@
           </div>
           <div class="project-card">
             <h1 class="pro-heading">React ToDo App</h1>
-            <img
+            <center>
+              <img
               src="./img/Todo.png"
               alt="Project Screenshot"
               class="pro-img"
               height="350px"
               width="550px"
             />
+            </center>
             <p class="para-caption">
               Built a dynamic task manager using React.js with CRUD
               functionality and responsive design. Used useState to manage tasks
@@ -461,8 +453,8 @@
           </div>
         </div>
       </section>
-      <section id="Contact" class="contact">
-        <div class="contact-head">
+      <section id="Contact" class="contact-head">
+        
           <h1 class="contact-name">Contact</h1>
           <p class="contact-para">
             I'm currently looking for frontend developer opportunities where I
@@ -531,7 +523,7 @@
                 >
                   <div class="share">
                     <div class="creater">
-                      <label for="name">Your Name</label>
+                      <label class="label" for="name">Your Name</label>
                       <input
                         class="input"
                         name="name"
@@ -541,7 +533,7 @@
                       />
                     </div>
                     <div class="email">
-                      <label for="mail">Your Email</label>
+                      <label class="label" for="mail">Your Email</label>
                       <input
                         class="input"
                         name="email"
@@ -552,11 +544,11 @@
                     </div>
                   </div>
                   <div class="subject">
-                    <label for="subject">Subject</label>
-                    <input type="text" name="subject" id="subject" required />
+                    <label class="label" for="subject">Subject</label>
+                    <input type="text"  name="subject" id="subject" required  />
                   </div>
                   <div class="message">
-                    <label for="message">Message</label>
+                    <label class="label" for="message">Message</label>
                     <textarea
                       name="message"
                       id="message"
@@ -570,25 +562,19 @@
                     </center>
                   </div>
                 </form>
-                <!-- <p id="success-msg" style="display: none; color: green; text-align: center; margin-top: 10px;">
-    ✅ Your message has been sent!
-  </p> -->
               </div>
             </div>
           </div>
-        </div>
+
+           <a href="#Home" class="up-arrow" >
+            <i class="fa-solid fa-arrow-up fa-beat-fade fa-lg"></i></a>
       </section>
     </main>
     <footer id="footer" class="site-footer">
       <p>© 2025 Mathavan. All rights reserved.</p>
-      <a href="#Home" class="up-arrow">
-        <i
-          class="fa-solid fa-arrow-up fa-beat-fade fa-lg"
-          style="color: white"
-        ></i>
-      </a>
     </footer>
 
+          
     <script src="./script.js"></script>
   </body>
-</html>
+</html> 

@@ -1,4 +1,4 @@
-// Typed.js
+ // Typed.js
 new Typed("#typed", {
   strings: [
     "Front-End Developer",
@@ -10,23 +10,7 @@ new Typed("#typed", {
   loop: true,
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Typed.js
-//   new Typed("#typed", {
-//     strings: [
-//       "Front-End Developer",
-//       "HTML CSS JAVASCRIPT REACT.JS",
-//       "Creative Problem Solver",
-//     ],
-//     typeSpeed: 100,
-//     backSpeed: 50,
-//     loop: true,
-//   });
 
-//   // ...rest of your JS
-// });
-
-// Intersection Observer
 const faders = document.querySelectorAll(".fade-in");
 
 const appearOnScroll = new IntersectionObserver((entries) => {
@@ -102,12 +86,37 @@ window.onload = function () {
     });
 
     navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${currentSection}`) {
-        link.classList.add("active");
-      }
-    });
+  link.classList.remove("active");
+  if (link.getAttribute("href") === `#${currentSection}`) {
+    link.classList.add("active");
+  }
+});
   });
 
   window.dispatchEvent(new Event("scroll"));
 };
+
+// const homeSection = document.querySelector(".home");
+// if (homeSection) {
+//   homeSection.style.display = "flex";
+// }
+
+//   const sidebar = document.getElementById("sidebar");
+// const openBtn = document.getElementById("openSidebar");
+//   const closeBtn = document.getElementById("closeSidebar");
+
+
+// openBtn.addEventListener("click", () => {
+//   sidebar.classList.add("active");
+// });
+
+//   closeBtn.addEventListener("click", () => {
+//     sidebar.classList.remove("active");
+//   });
+
+ document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('sidebar-toggle').checked = false;
+    });
+  });
+
